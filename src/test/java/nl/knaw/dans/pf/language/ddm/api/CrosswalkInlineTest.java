@@ -251,8 +251,8 @@ public class CrosswalkInlineTest {
         }
         final EasyMetadata emd = runTest(new Exception(), newRoot(newMiniProfile("") + newAdditional(sb.toString())), 0);
         logger.debug(Arrays.deepToString(emd.getEmdDate().getValues().toArray()));
-        // only the date from the default content of miniProfile is detected
-        assertThat(emd.getEmdDate().getValues().size(), is(1));
+        // only the dates from the default content of miniProfile are detected, ddm:created and ddm:available
+        assertThat(emd.getEmdDate().getValues().size(), is(2));
     }
 
     @Test
@@ -266,7 +266,7 @@ public class CrosswalkInlineTest {
     public void dates() throws Exception {
         final StringBuffer sb = new StringBuffer();
         // ddm:created is in miniProfile
-        sb.append(newEl("ddm:available", "", "1900"));
+        // ddm:available is in miniProfile
 
         int i = 0;
         for (final String field : dateFields) {
@@ -318,6 +318,7 @@ public class CrosswalkInlineTest {
                 + newEl("dcterms:description", "", "tv serie") //
                 + newEl("dc:creator", "", "meneer de uil") //
                 + newEl("ddm:created", "", "2013") //
+                + newEl("ddm:available", "", "2013") //
                 + newEl("ddm:audience", "", MINI_AUDIENCE) //
                 + newEl("ddm:accessRights", "", "OPEN_ACCESS_FOR_REGISTERED_USERS");
 
