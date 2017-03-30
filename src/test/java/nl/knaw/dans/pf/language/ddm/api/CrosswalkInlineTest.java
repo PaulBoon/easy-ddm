@@ -318,7 +318,7 @@ public class CrosswalkInlineTest {
                 + newEl("dcterms:description", "", "tv serie") //
                 + newEl("dc:creator", "", "meneer de uil") //
                 + newEl("ddm:created", "", "2013") //
-                + newEl("ddm:available", "", "2013") //
+                + newEl("ddm:available", "", "2014") //
                 + newEl("ddm:audience", "", MINI_AUDIENCE) //
                 + newEl("ddm:accessRights", "", "OPEN_ACCESS_FOR_REGISTERED_USERS");
 
@@ -356,6 +356,7 @@ public class CrosswalkInlineTest {
         assertThat(emd.getEmdDescription().getDcDescription().get(0).getValue(), is("tv serie"));
         assertThat(emd.getEmdCreator().getDcCreator().get(0).getValue(), is("meneer de uil"));
         assertThat(emd.getEmdDate().getEasCreated().get(0).getValue(), is(new DateTime("2013")));
+        assertThat(emd.getEmdDate().getEasAvailable().get(0).getValue(), is(new DateTime("2014")));
         assertThat(emd.getEmdRights().getTermsAccessRights().get(0).getValue(), is("OPEN_ACCESS_FOR_REGISTERED_USERS"));
     }
 

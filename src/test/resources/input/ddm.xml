@@ -40,9 +40,9 @@
                 </dcx-dai:organization>
             </dcx-dai:author>
         </dcx-dai:creatorDetails>
-	<ddm:created>2015-09-09</ddm:created>
+    <ddm:created>2015-09-09</ddm:created>
     <ddm:available>2015-09-09</ddm:available>
-	<ddm:audience>D41500</ddm:audience>
+    <ddm:audience>D41500</ddm:audience>
 	<ddm:accessRights>OPEN_ACCESS</ddm:accessRights>
 	</ddm:profile>
 	<ddm:dcmiMetadata>
